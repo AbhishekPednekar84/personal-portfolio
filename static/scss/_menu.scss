@@ -38,3 +38,99 @@
         }
     } 
 }
+
+// Menu overlay
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.95;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &-branding,
+    &-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background: darken($primary_color, 5);
+        list-style: none;
+        transform: translate3d(0, -100%, 0);
+        @include easeOut;
+
+        &.show {
+            // Slide in from top
+            transform: translate3d(0, 0 ,0);
+        }
+    }
+
+    &-branding {
+        background: $primary_color;
+        transform: translate3d(0, 100%, 0);
+        @include easeOut;
+
+        &.show {
+            // Slide in from bottom
+            transform: translate3d(0, 0 ,0);
+        }
+
+        .potrait {
+            height: 250px;
+            width: 250px;
+            background: url('../images/profile.jpg');
+            border-radius: 50%;
+            border: 2px solid $secondary_color;
+        }
+    }
+
+    .nav-item {
+        transform: translate3d(600px, 0 ,0);
+        @include easeOut;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+
+        &.current > a {
+            color: $secondary_color;
+        }
+    }
+
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+        @include easeOut;
+
+        &:hover {
+            color: $secondary_color;
+        }
+    }
+
+}
+
+// Delay each nav item's slide by 0.1s
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
+    }
+}
