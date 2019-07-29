@@ -102,7 +102,7 @@
   width: 250px;
   background: url("../images/profile.jpg");
   border-radius: 50%;
-  border: 2px solid #eece1a;
+  border: 2px solid #ffb961;
 }
 
 .menu .nav-item {
@@ -118,7 +118,7 @@
 }
 
 .menu .nav-item.current > a {
-  color: #eece1a;
+  color: #ffb961;
 }
 
 .menu .nav-link {
@@ -135,7 +135,7 @@
 }
 
 .menu .nav-link:hover {
-  color: #eece1a;
+  color: #ffb961;
 }
 
 .nav-item:nth-child(1) {
@@ -156,6 +156,47 @@
 .nav-item:nth-child(4) {
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  div.menu-branding,
+  ul.menu-nav {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  div.menu-branding.show,
+  ul.menu-nav.show {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .menu-nav {
+    height: 75vh;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+  .menu-branding {
+    height: 25vh;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main#home {
+    margin-top: 10vh;
+  }
 }
 
 * {
@@ -199,7 +240,7 @@ h3 {
 h1.lg-heading,
 h2.lg-heading,
 h3.lg-heading {
-  font-size: 6rem;
+  font-size: 3.5rem;
 }
 
 h1.sm-heading,
@@ -222,7 +263,7 @@ header {
 }
 
 .text-secondary {
-  color: #eece1a;
+  color: #ffb961;
 }
 
 main {
@@ -239,7 +280,7 @@ main .icons a {
 }
 
 main .icons a:hover {
-  color: #eece1a;
+  color: #ffb961;
   -webkit-transition: all 0.75s ease-out;
   transition: all 0.75s ease-out;
 }
