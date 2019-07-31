@@ -396,6 +396,8 @@ main#contact .contact-btn {
 main#contact .contact-btn:hover {
   background: #ffb961;
   color: #444;
+  -webkit-transition: all 0.75s ease-out;
+  transition: all 0.75s ease-out;
 }
 
 main#contact #right {
