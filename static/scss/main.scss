@@ -72,7 +72,92 @@ main {
         overflow: hidden;
 
         h1 {
-            margin-top: 20vh;
+            margin-top: 10vh;
+        }
+    }
+
+    &#contact {
+        
+        #wrapper {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #left {
+            @include flex-properties;
+            flex: 1;
+            margin-top: 4rem;
+            border: 1px solid $secondary_color;
+            padding: 1rem;
+        }
+
+        #contact-form {
+            @include flex-properties;
+            padding: 1.5rem;
+        }
+
+        .text-label {
+            display: block;
+            text-align: left;
+            line-height: 1.5rem;
+            font-weight: 500;
+            font-size: 1rem;
+            padding-bottom: 0.5rem;
+
+        }
+
+        .text-input {
+            width: 100%;
+            margin-bottom: 2rem;
+            height: 40px;
+            padding: 0.5rem 1rem;
+            border: 0.5px solid $primary_color;
+            border-radius: 3px;
+            background: rgba(lighten($color: $primary_color, 
+            $amount: 12), $background-opacity);
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        .text-area-input {
+            width: 100%;
+            margin-bottom: 2rem;
+            padding: 0.5rem 1rem;
+            height: 150px;
+            border: 0.5px solid $primary_color;
+            border-radius: 3px;
+            background: rgba(lighten($color: $primary_color, 
+            $amount: 12), $background-opacity);
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        .contact-btn {
+            width: 100%;
+            display: block;
+            height: 2.5rem;
+            background: rgba(darken($color: $primary_color, 
+            $amount: 4), $background-opacity);
+            border: 0.5px solid $primary_color;
+            border-radius: 3px;
+            padding: 0.7rem 1rem;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+
+            &:hover {
+                background: $secondary_color;
+                color: $primary_color;
+            }
+        }
+
+        #right {
+            @include flex-properties;
+            flex: 1;
+            margin-top: 4rem;
         }
     }
 }

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Abhishek Pednekar</title>
+{% endif %}
+
+{% endblock head %}
+
+{% block content %}
+<main id="contact">
+    <div id="wrapper">
+        <div id="left">
+            <h1 class="sm-heading">
+            Contact <span class="text-secondary">Me</span>
+            </h1>
+            <div id="contact-form">
+                <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                    <div>
+                        {{ form.username.label(class="text-label") }}
+                        {{ form.username(class="text-input") }}
+                    </div>
+                    <div>
+                        {{ form.email.label(class="text-label") }}
+                        {{ form.email(class="text-input") }}
+                    </div>
+                    <div>
+                        {{ form.subject.label(class="text-label") }}
+                        {{ form.subject(class="text-input") }}
+                    </div>
+                    <div>
+                        {{ form.message.label(class="text-label") }}
+                        {{ form.message(class="text-area-input") }}
+                    </div>
+                    <div>
+                        {{ form.submit(class="contact-btn") }}
+                    </div>
+                </form>   
+            </div>     
+        </div>
+        <div id="right">
+            <h1>Right</h1>
+        </div>
+    </div>
+</main>
+<script type="text/javascript" src=" {{ url_for('static', filename='js/contact.js') }}"></script>
+{% endblock content %}

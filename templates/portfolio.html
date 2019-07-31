@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Abhishek Pednekar</title>
+    {% endif %}
+    
+{% endblock head %}
+
+{% block content %}
+    <main id="portfolio">
+        <h1>Portfolio</h1>
+    </main>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
+{% endblock content %}
