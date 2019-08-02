@@ -253,8 +253,22 @@ h1.sm-heading,
 h2.sm-heading,
 h3.sm-heading {
   margin-bottom: 2rem;
-  padding: 0.2rem 1rem;
   background: rgba(73, 73, 73, 0.5);
+}
+
+h4 {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 80%;
+  background-color: #ffb961;
+  height: 1px;
 }
 
 a {
@@ -309,77 +323,63 @@ main#contact #wrapper {
           flex-direction: row;
 }
 
-main#contact #left {
+main#contact #wrapper #left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  text-align: center;
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
   margin-top: 4rem;
+  margin-left: 4rem;
   border: 1px solid #ffb961;
   padding: 1rem;
 }
 
-main#contact #contact-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+main#contact #wrapper #left #contact-form {
   padding: 1.5rem;
 }
 
-main#contact .text-label {
+main#contact #wrapper #left .text-label {
   display: block;
   text-align: left;
   line-height: 1.5rem;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 300;
+  font-size: 1.2rem;
   padding-bottom: 0.5rem;
 }
 
-main#contact .text-input {
+main#contact #wrapper #left .text-input {
   width: 100%;
-  margin-bottom: 2rem;
-  height: 40px;
+  margin-bottom: 3rem;
+  height: 50px;
   padding: 0.5rem 1rem;
   border: 0.5px solid #444;
   border-radius: 3px;
   background: rgba(99, 99, 99, 0.9);
   text-transform: uppercase;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
-main#contact .text-area-input {
+main#contact #wrapper #left .text-area-input {
   width: 100%;
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
-  height: 150px;
+  height: 170px;
   border: 0.5px solid #444;
   border-radius: 3px;
   background: rgba(99, 99, 99, 0.9);
-  text-transform: uppercase;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
-main#contact .contact-btn {
+main#contact #wrapper #left .contact-btn {
   width: 100%;
   display: block;
   height: 2.5rem;
@@ -393,21 +393,92 @@ main#contact .contact-btn {
   cursor: pointer;
 }
 
-main#contact .contact-btn:hover {
+main#contact #wrapper #left .contact-btn:hover {
   background: #ffb961;
   color: #444;
   -webkit-transition: all 0.75s ease-out;
   transition: all 0.75s ease-out;
 }
 
-main#contact #right {
+main#contact #wrapper #left .alert-success {
+  background: #444;
+  color: #fff;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  height: 70%;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ffb961;
+}
+
+main#contact #wrapper #left .text-error {
+  border: 1.5px solid #ffb961;
+}
+
+main#contact #wrapper #left .error-message {
+  color: #ffb961;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+main#contact #wrapper #right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-top: 4rem;
+  margin-left: 1.5rem;
+  margin-right: 4rem;
+  padding: 1rem;
+  border: 1px solid #ffb961;
+}
+
+main#contact #wrapper #right #books .books-top,
+main#contact #wrapper #right #books .books-center,
+main#contact #wrapper #right #books .books-bottom {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+main#contact #wrapper #right #books .books-top a,
+main#contact #wrapper #right #books .books-center a,
+main#contact #wrapper #right #books .books-bottom a {
+  padding: 1rem;
+}
+
+main#contact #wrapper #right #books .book-widget {
+  max-width: 80px;
+}
+
+main#contact #wrapper #right #books h4 {
+  font-weight: bold;
+}
+
+main#contact #wrapper #right #pod-yt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+main#contact #wrapper #right #pod-yt #podcasts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -415,6 +486,41 @@ main#contact #right {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-top: 4rem;
+  border-right: 1px solid #ffb961;
+}
+
+main#contact #wrapper #right #pod-yt #podcasts h4 {
+  font-weight: bold;
+}
+
+main#contact #wrapper #right #pod-yt .pod-list {
+  padding-top: 0;
+  text-align: center;
+  line-height: 2rem;
+  font-weight: 200;
+}
+
+main#contact #wrapper #right #pod-yt #channels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main#contact #wrapper #right #pod-yt #channels h4 {
+  font-weight: bold;
+}
+
+main#contact #wrapper #right #pod-yt #channels .channel-list {
+  padding-top: 0;
+  text-align: center;
+  line-height: 2rem;
+  font-weight: 200;
 }
 /*# sourceMappingURL=main.css.map */

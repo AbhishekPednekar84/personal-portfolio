@@ -9,7 +9,7 @@ class ContactForm(FlaskForm):
     email = StringField('Your Email', validators=[DataRequired(), Email()])
     subject = StringField('Subject', validators=[
                           DataRequired(), Length(min=2, max=20)])
-    message = TextAreaField('Your Message', validators=[DataRequired])
+    message = TextAreaField('Your Message', validators=[DataRequired()])
     submit = SubmitField('SEND')
 
     def __repr__(self):

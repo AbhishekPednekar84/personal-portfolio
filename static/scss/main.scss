@@ -29,11 +29,25 @@ h3 {
 
     &.sm-heading {
         margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
         // Wrapping in an rgba function for opacity 
         background: rgba(lighten($color: $primary_color, 
             $amount: 2), 0.5)
     }
+}
+
+h4 {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 1rem;
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 80%;               
+    background-color: $secondary_color;
+    height: 1px;
 }
 
 a {
@@ -81,84 +95,179 @@ main {
         #wrapper {
             display: flex;
             flex-direction: row;
-        }
 
-        #left {
-            @include flex-properties;
-            flex: 1;
-            margin-top: 4rem;
-            border: 1px solid $secondary_color;
-            padding: 1rem;
-        }
+            #left {
+                display: flex;
+                flex-direction: column;
+                text-align: center;    
+                flex: 2.5; 
+                margin-top: 4rem;
+                margin-left: 4rem;
+                border: 1px solid $secondary_color;
+                padding: 1rem;
 
-        #contact-form {
-            @include flex-properties;
-            padding: 1.5rem;
-        }
-
-        .text-label {
-            display: block;
-            text-align: left;
-            line-height: 1.5rem;
-            font-weight: 500;
-            font-size: 1rem;
-            padding-bottom: 0.5rem;
-
-        }
-
-        .text-input {
-            width: 100%;
-            margin-bottom: 2rem;
-            height: 40px;
-            padding: 0.5rem 1rem;
-            border: 0.5px solid $primary_color;
-            border-radius: 3px;
-            background: rgba(lighten($color: $primary_color, 
-            $amount: 12), $background-opacity);
-            text-transform: uppercase;
-            color: #fff;
-            font-size: 2rem;
-        }
-
-        .text-area-input {
-            width: 100%;
-            margin-bottom: 2rem;
-            padding: 0.5rem 1rem;
-            height: 150px;
-            border: 0.5px solid $primary_color;
-            border-radius: 3px;
-            background: rgba(lighten($color: $primary_color, 
-            $amount: 12), $background-opacity);
-            text-transform: uppercase;
-            color: #fff;
-            font-size: 2rem;
-        }
-
-        .contact-btn {
-            width: 100%;
-            display: block;
-            height: 2.5rem;
-            background: rgba(darken($color: $primary_color, 
-            $amount: 4), $background-opacity);
-            border: 0.5px solid $primary_color;
-            border-radius: 3px;
-            padding: 0.7rem 1rem;
-            color: #fff;
-            font-weight: bold;
-            font-size: 1rem;
-            cursor: pointer;
-
-            &:hover {
-                background: $secondary_color;
-                color: $primary_color;
-                @include easeOut;
+                #contact-form {
+                    padding: 1.5rem;
+                }
+        
+                .text-label {
+                    display: block;
+                    text-align: left;
+                    line-height: 1.5rem;
+                    font-weight: 300;
+                    font-size: 1.2rem;
+                    padding-bottom: 0.5rem;
+        
+                }
+        
+                .text-input {
+                    width: 100%;
+                    margin-bottom: 3rem;
+                    height: 50px;
+                    padding: 0.5rem 1rem;
+                    border: 0.5px solid $primary_color;
+                    border-radius: 3px;
+                    background: rgba(lighten($color: $primary_color, 
+                    $amount: 12), $background-opacity);
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-size: 1rem;
+                }
+        
+                .text-area-input {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                    padding: 0.5rem 1rem;
+                    height: 170px;
+                    border: 0.5px solid $primary_color;
+                    border-radius: 3px;
+                    background: rgba(lighten($color: $primary_color, 
+                    $amount: 12), $background-opacity);
+                    color: #fff;
+                    font-size: 1.5rem;
+                }
+        
+                .contact-btn {
+                    width: 100%;
+                    display: block;
+                    height: 2.5rem;
+                    background: rgba(darken($color: $primary_color, 
+                    $amount: 4), $background-opacity);
+                    border: 0.5px solid $primary_color;
+                    border-radius: 3px;
+                    padding: 0.7rem 1rem;
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background: $secondary_color;
+                        color: $primary_color;
+                        @include easeOut;
+                    }
+                }
+        
+                .alert-success {
+                    background: $primary_color;
+                    color:#fff;
+                    padding: 0.5rem 0.5rem;
+                    font-size: 1rem;
+                    height: 70%;
+                    width: 100%;
+                    margin-bottom: 0.5rem;
+                    border: 1px solid $secondary_color;
+                }
+        
+                .text-error {
+                    border: 1.5px solid $secondary_color;
+                }
+                
+                .error-message {           
+                    color: $secondary_color;
+                    text-align: left;
+                    margin-top: 0;
+                    margin-bottom: 0.5rem;
+                    padding: 0;
+                }    
             }
-        }
+                
+            #right {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                text-align: center;
+                margin-top: 4rem;
+                margin-left: 1.5rem;
+                margin-right: 4rem;
+                padding: 1rem;
+                border: 1px solid $secondary_color;
+                
+                #books {
 
-        #right {
-            @include flex-properties;
-            flex: 1;
-            margin-top: 4rem;
-        }
+                    .books-top,
+                    .books-center,
+                    .books-bottom {
+                        text-align: center;
+                        margin-bottom: 2rem;
+                        
+                        a {
+                            padding: 1rem;
+                        }
+                    }
+                    
+                    .book-widget {
+                        max-width: 80px;
+                    } 
+
+                    h4 {
+                        font-weight: bold;
+                    }
+                }
+
+                #pod-yt {
+                    display: flex;
+                    flex-direction: row;
+                    text-align: center;
+                    margin-top: 2rem;
+
+                    #podcasts {
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                        border-right: 1px solid $secondary_color;
+
+                        h4 {
+                            font-weight: bold;
+                        }
+                    }
+
+                    .pod-list {
+                        padding-top: 0;
+                        text-align: center;
+                        line-height: 2rem;
+                        font-weight: 200;
+                    }
+
+                    #channels {
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                        
+                        h4 {
+                            font-weight: bold;
+                        }
+
+                        .channel-list {
+                            padding-top: 0;
+                            text-align: center;
+                            line-height: 2rem;
+                            font-weight: 200;
+                        }
+                    }
+
+                }
+            }
+        }        
     }
 }

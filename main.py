@@ -1,5 +1,6 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, flash, redirect
 from forms import ContactForm
+from send_email import send_email
 
 app = Flask(__name__)
 
@@ -25,4 +26,10 @@ def blog():
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
+    if form.validate_on_submit():
+        send_email(form.username.data, form.email.data,
+                   form.subject.data, form.message.data)
+        flash('Thanks! I will be in touch soon.')
+        return redirect(url_for('contact'))
+
     return render_template("contact.html", title='Contact', form=form)

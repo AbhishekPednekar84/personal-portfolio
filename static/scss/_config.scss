@@ -30,13 +30,6 @@ $background-opacity: 0.9;
     }
 }
 
-@mixin flex-properties {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
 // Function to change text color
 @function set-text-color($color){
     @if (lightness($color) > 40) {
