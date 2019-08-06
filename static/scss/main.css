@@ -1,5 +1,5 @@
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   right: 35px;
   top: 35px;
@@ -160,13 +160,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  main {
+  main#home {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
   }
-  main .lg-heading {
+  main#home .lg-heading {
     line-height: 1;
     margin-bottom: 1rem;
   }
@@ -197,11 +197,43 @@
     width: 150px;
     height: 150px;
   }
+  #wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  #right {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 @media screen and (max-width: 500px) {
   main#home {
     margin-top: 10vh;
+  }
+  #wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  #right {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 
@@ -313,39 +345,30 @@ main#home h1 {
   margin-top: 10vh;
 }
 
-main#contact #wrapper {
+#wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  margin-top: 15vh;
 }
 
-main#contact #wrapper #left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  -webkit-box-flex: 2.5;
-      -ms-flex: 2.5;
-          flex: 2.5;
-  margin-top: 4rem;
-  margin-left: 4rem;
+#left {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
   border: 1px solid #ffb961;
   padding: 1rem;
+  overflow: hidden;
 }
 
-main#contact #wrapper #left #contact-form {
+#left #contact-form {
   padding: 1.5rem;
 }
 
-main#contact #wrapper #left .text-label {
+#left .text-label {
   display: block;
   text-align: left;
   line-height: 1.5rem;
@@ -354,7 +377,7 @@ main#contact #wrapper #left .text-label {
   padding-bottom: 0.5rem;
 }
 
-main#contact #wrapper #left .text-input {
+#left .text-input {
   width: 100%;
   margin-bottom: 3rem;
   height: 50px;
@@ -367,7 +390,7 @@ main#contact #wrapper #left .text-input {
   font-size: 1rem;
 }
 
-main#contact #wrapper #left .text-area-input {
+#left .text-area-input {
   width: 100%;
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
@@ -379,7 +402,7 @@ main#contact #wrapper #left .text-area-input {
   font-size: 1.5rem;
 }
 
-main#contact #wrapper #left .contact-btn {
+#left .contact-btn {
   width: 100%;
   display: block;
   height: 2.5rem;
@@ -393,14 +416,14 @@ main#contact #wrapper #left .contact-btn {
   cursor: pointer;
 }
 
-main#contact #wrapper #left .contact-btn:hover {
+#left .contact-btn:hover {
   background: #ffb961;
   color: #444;
   -webkit-transition: all 0.75s ease-out;
   transition: all 0.75s ease-out;
 }
 
-main#contact #wrapper #left .alert-success {
+#left .alert-success {
   background: #444;
   color: #fff;
   padding: 0.5rem 0.5rem;
@@ -411,11 +434,11 @@ main#contact #wrapper #left .alert-success {
   border: 1px solid #ffb961;
 }
 
-main#contact #wrapper #left .text-error {
+#left .text-error {
   border: 1.5px solid #ffb961;
 }
 
-main#contact #wrapper #left .error-message {
+#left .error-message {
   color: #ffb961;
   text-align: left;
   margin-top: 0;
@@ -423,47 +446,41 @@ main#contact #wrapper #left .error-message {
   padding: 0;
 }
 
-main#contact #wrapper #right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#right {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  border: 1px solid #ffb961;
   text-align: center;
-  margin-top: 4rem;
-  margin-left: 1.5rem;
-  margin-right: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
   padding: 1rem;
   border: 1px solid #ffb961;
 }
 
-main#contact #wrapper #right #books .books-top,
-main#contact #wrapper #right #books .books-center,
-main#contact #wrapper #right #books .books-bottom {
+#right #books .books-top,
+#right #books .books-center,
+#right #books .books-bottom {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-main#contact #wrapper #right #books .books-top a,
-main#contact #wrapper #right #books .books-center a,
-main#contact #wrapper #right #books .books-bottom a {
+#right #books .books-top a,
+#right #books .books-center a,
+#right #books .books-bottom a {
   padding: 1rem;
 }
 
-main#contact #wrapper #right #books .book-widget {
+#right #books .book-widget {
   max-width: 80px;
 }
 
-main#contact #wrapper #right #books h4 {
+#right #books h4 {
   font-weight: bold;
 }
 
-main#contact #wrapper #right #pod-yt {
+#right #pod-yt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -475,7 +492,7 @@ main#contact #wrapper #right #pod-yt {
   margin-top: 2rem;
 }
 
-main#contact #wrapper #right #pod-yt #podcasts {
+#right #pod-yt #podcasts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -489,18 +506,18 @@ main#contact #wrapper #right #pod-yt #podcasts {
   border-right: 1px solid #ffb961;
 }
 
-main#contact #wrapper #right #pod-yt #podcasts h4 {
+#right #pod-yt #podcasts h4 {
   font-weight: bold;
 }
 
-main#contact #wrapper #right #pod-yt .pod-list {
+#right #pod-yt .pod-list {
   padding-top: 0;
   text-align: center;
   line-height: 2rem;
   font-weight: 200;
 }
 
-main#contact #wrapper #right #pod-yt #channels {
+#right #pod-yt #channels {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -513,11 +530,11 @@ main#contact #wrapper #right #pod-yt #channels {
           flex: 1;
 }
 
-main#contact #wrapper #right #pod-yt #channels h4 {
+#right #pod-yt #channels h4 {
   font-weight: bold;
 }
 
-main#contact #wrapper #right #pod-yt #channels .channel-list {
+#right #pod-yt #channels .channel-list {
   padding-top: 0;
   text-align: center;
   line-height: 2rem;

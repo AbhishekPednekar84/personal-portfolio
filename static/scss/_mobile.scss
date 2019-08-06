@@ -1,6 +1,5 @@
 // Wide screens
 @include mediaXl {
-
 }
 
 // Desktops and laptops
@@ -10,7 +9,7 @@
 
 // Tablets
 @include mediaMd {
-    main {
+    main#home {
         align-items: center;
         text-align: center;
 
@@ -47,12 +46,38 @@
             height: 150px;
         }
     }
+
+    #wrapper {
+        flex-direction: column;
+    }
+
+    #left {
+        flex: 1;
+    }
+
+    #right {
+        flex: 1;
+    }
+
 }
+
 
 // Smartphones
 @include mediaSm {
     main#home {
         margin-top: 10vh;
+    }
+
+    #wrapper {
+        flex-direction: column;
+    }
+
+    #left {
+        flex: 1;
+    }
+
+    #right {
+        flex: 1;
     }
 }
 

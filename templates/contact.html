@@ -1,151 +1,167 @@
 {% extends "layout.html" %}
 
 {% block head %}
-    {{ super() }}
-    {% if title %}
-    <title>{{ title }}</title>
-    {% else %}
-    <title>Abhishek Pednekar</title>
+{{ super() }}
+{% if title %}
+<title>{{ title }}</title>
+{% else %}
+<title>Abhishek Pednekar</title>
 {% endif %}
 
 {% endblock head %}
 
 {% block content %}
-<main id="contact">
+
+<body>
+   
+   
     <div id="wrapper">
         <div id="left">
             
             {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    {% for message in messages %}
-                        <div class="alert-success">
-                            {{ message }}
-                        </div>
-                    {% endfor%}
-                {% endif %}
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert-success">
+                {{ message }}
+            </div>
+            {% endfor%}
+            {% endif %}
             {% endwith%}
 
-
             <h1 class="sm-heading">
-            Contact <span class="text-secondary">Me</span>
+                Contact <span class="text-secondary">Me</span>
             </h1>
             <div id="contact-form">
-                <form method="POST", action="">
-                {{ form.hidden_tag() }}
+                <form method="POST" , action="">
+                    {{ form.hidden_tag() }}
                     <div>
                         {{ form.username.label(class="text-label") }}
 
                         {% if form.username.errors %}
-                            {{ form.username(class="text-input text-error") }}
-                            <div class="error-message">
-                                {% for error in form.username.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
-                            </div>
+                        {{ form.username(class="text-input text-error") }}
+                        <div class="error-message">
+                            {% for error in form.username.errors %}
+                            <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
                         {% else %}
-                            {{ form.username(class="text-input") }}
+                        {{ form.username(class="text-input") }}
                         {% endif %}
                     </div>
                     <div>
                         {{ form.email.label(class="text-label") }}
                         {% if form.email.errors %}
-                            {{ form.email(class="text-input text-error") }}
-                            <div class="error-message">
-                                {% for error in form.email.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
-                            </div>
+                        {{ form.email(class="text-input text-error") }}
+                        <div class="error-message">
+                            {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
                         {% else %}
-                            {{ form.email(class="text-input") }}
+                        {{ form.email(class="text-input") }}
                         {% endif %}
                     </div>
                     <div>
                         {{ form.subject.label(class="text-label") }}
                         {% if form.subject.errors %}
-                            {{ form.subject(class="text-input text-error") }}
-                            <div class="error-message">
-                                {% for error in form.subject.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
-                            </div>
+                        {{ form.subject(class="text-input text-error") }}
+                        <div class="error-message">
+                            {% for error in form.subject.errors %}
+                            <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
                         {% else %}
-                            {{ form.subject(class="text-input") }}
+                        {{ form.subject(class="text-input") }}
                         {% endif %}
                     </div>
                     <div>
                         {{ form.message.label(class="text-label") }}
                         {% if form.message.errors %}
-                            {{ form.message(class="text-area-input text-error") }}
-                            <div class="error-message">
-                                {% for error in form.message.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
-                            </div>
+                        {{ form.message(class="text-area-input text-error") }}
+                        <div class="error-message">
+                            {% for error in form.message.errors %}
+                            <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
                         {% else %}
-                            {{ form.message(class="text-area-input") }}
+                        {{ form.message(class="text-area-input") }}
                         {% endif %}
                     </div>
                     <div>
                         {{ form.submit(class="contact-btn") }}
                     </div>
-                </form>   
-            </div>     
+                </form>
+            </div>
+
         </div>
 
         <div id="right">
-            <h1 class="sm-heading">Reference</h1>
+<h1 class="sm-heading">References</h1>
             <div id="books">
                 <h4>Books</h4>
                 <div class="books-top">
-                    <a target="_blank" href="https://www.amazon.in/Python-Tricks-Buffet-Awesome-Features/dp/1775093301/ref=sr_1_3?keywords=python+tricks&qid=1564645926&s=gateway&sr=8-3">
-                            <img class="book-widget" src="https://images-na.ssl-images-amazon.com/images/I/41Shl3kYpsL._SX331_BO1,204,203,200_.jpg">
+                    <a target="_blank"
+                        href="https://www.amazon.in/Python-Tricks-Buffet-Awesome-Features/dp/1775093301/ref=sr_1_3?keywords=python+tricks&qid=1564645926&s=gateway&sr=8-3">
+                        <img class="book-widget"
+                            src="https://images-na.ssl-images-amazon.com/images/I/41Shl3kYpsL._SX331_BO1,204,203,200_.jpg">
                     </a>
 
-                    <a target="_blank" href="https://www.amazon.in/Automate-Boring-Python-Albert-Sweigart/dp/1593275994/ref=sr_1_2?crid=1FFWYK9DHGM3S&keywords=automate+the+boring+stuff+with+python&qid=1564648939&s=gateway&sprefix=automate%2Caps%2C298&sr=8-2">
-                            <img class="book-widget" src="https://images-na.ssl-images-amazon.com/images/I/915d%2BqI9NAL.jpg">
+                    <a target="_blank"
+                        href="https://www.amazon.in/Automate-Boring-Python-Albert-Sweigart/dp/1593275994/ref=sr_1_2?crid=1FFWYK9DHGM3S&keywords=automate+the+boring+stuff+with+python&qid=1564648939&s=gateway&sprefix=automate%2Caps%2C298&sr=8-2">
+                        <img class="book-widget"
+                            src="https://images-na.ssl-images-amazon.com/images/I/915d%2BqI9NAL.jpg">
                     </a>
                 </div>
 
                 <div class="books-center">
-                    <a target="_blank" href="https://www.amazon.in/Cracking-Coding-Interview-Programing-Questions/dp/0984782850/ref=sr_1_1?crid=2LM4CO6RWHVV2&keywords=cracking+the+coding+interview+python&qid=1564650340&s=gateway&sprefix=cracking+the+coding+interview+pyth%2Caps%2C313&sr=8-1">
-                            <img class="book-widget" src="https://images-na.ssl-images-amazon.com/images/I/71jRvBEDNmL.jpg">
+                    <a target="_blank"
+                        href="https://www.amazon.in/Cracking-Coding-Interview-Programing-Questions/dp/0984782850/ref=sr_1_1?crid=2LM4CO6RWHVV2&keywords=cracking+the+coding+interview+python&qid=1564650340&s=gateway&sprefix=cracking+the+coding+interview+pyth%2Caps%2C313&sr=8-1">
+                        <img class="book-widget" src="https://images-na.ssl-images-amazon.com/images/I/71jRvBEDNmL.jpg">
                     </a>
-                
-                    <a target="_blank" href="https://www.amazon.in/Python-Programming-modular-approach-Pearson/dp/9332585342/ref=sr_1_5?keywords=python+programming&qid=1564650647&s=gateway&sr=8-5">
-                            <img class="book-widget" src="https://images-na.ssl-images-amazon.com/images/I/51zt8KcbCDL._SX364_BO1,204,203,200_.jpg">
+
+                    <a target="_blank"
+                        href="https://www.amazon.in/Python-Programming-modular-approach-Pearson/dp/9332585342/ref=sr_1_5?keywords=python+programming&qid=1564650647&s=gateway&sr=8-5">
+                        <img class="book-widget"
+                            src="https://images-na.ssl-images-amazon.com/images/I/51zt8KcbCDL._SX364_BO1,204,203,200_.jpg">
                     </a>
                 </div>
 
-                <div class="books-bottom">    
-                    <a target="_blank" href="https://www.amazon.in/Pragmatic-Programmer-Andrew-Hunt/dp/8131722422/ref=sr_1_1?crid=35ZPWP5MYCTF7&keywords=the+pragmatic+programmer&qid=1564651347&s=gateway&sprefix=the+pragma%2Caps%2C281&sr=8-1">
-                            <img class="book-widget" src="https://images-na.ssl-images-amazon.com/images/I/4163oCmhq%2BL._SX425_BO1,204,203,200_.jpg">
+                <div class="books-bottom">
+                    <a target="_blank"
+                        href="https://www.amazon.in/Pragmatic-Programmer-Andrew-Hunt/dp/8131722422/ref=sr_1_1?crid=35ZPWP5MYCTF7&keywords=the+pragmatic+programmer&qid=1564651347&s=gateway&sprefix=the+pragma%2Caps%2C281&sr=8-1">
+                        <img class="book-widget"
+                            src="https://images-na.ssl-images-amazon.com/images/I/4163oCmhq%2BL._SX425_BO1,204,203,200_.jpg">
                     </a>
-                    <a target="_blank" href="https://www.amazon.in/Flask-Web-Development-Miquel-Grinberg/dp/1491991739/ref=sr_1_15?keywords=flask+programming&qid=1564651582&s=gateway&sr=8-15">
-                            <img class="book-widget" src="https://images-na.ssl-images-amazon.com/images/I/514Lbvt36zL._SX377_BO1,204,203,200_.jpg">
+                    <a target="_blank"
+                        href="https://www.amazon.in/Flask-Web-Development-Miquel-Grinberg/dp/1491991739/ref=sr_1_15?keywords=flask+programming&qid=1564651582&s=gateway&sr=8-15">
+                        <img class="book-widget"
+                            src="https://images-na.ssl-images-amazon.com/images/I/514Lbvt36zL._SX377_BO1,204,203,200_.jpg">
                     </a>
                 </div>
             </div>
             <hr>
-            <div id="pod-yt">                   
+            <div id="pod-yt">
                 <div id="podcasts">
                     <h4>Podcasts</h4>
                     <div class="pod-list">
                         <a target="_blank" href="https://talkpython.fm/">Talk Python To Me</a><br>
                         <a target="_blank" href="https://pythonbytes.fm/">Python Bytes</a><br>
                         <a target="_blank" href="https://djangochat.com/">Django Chat</a><br>
-                    </div>    
+                    </div>
                 </div>
                 <div id="channels">
-                    <h4>Channels</h4>
+                    <h4>YouTube</h4>
                     <div class="channel-list">
-                        <a target="_blank" href="https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g">Corey Schafer</a><br>
-                        <a target="_blank" href="https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA">Traversy Media</a><br>
-                        <a target="_blank" href="https://www.youtube.com/channel/UCI0vQvr9aFn27yR6Ej6n5UA">Real Python</a><br>
-                    </div>    
-                </div>  
-            </div>                  
-        </div>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g">Corey
+                            Schafer</a><br>
+                        <a target="_blank" href="https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA">Traversy
+                            Media</a><br>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCI0vQvr9aFn27yR6Ej6n5UA">Real
+                            Python</a><br>
+                    </div>
+                </div>
+            </div>
+        <div>
     </div>
-</main>
-<script type="text/javascript" src=" {{ url_for('static', filename='js/contact.js') }}"></script>
+            <script type="text/javascript" src=" {{ url_for('static', filename='js/contact.js') }}"></script>
 {% endblock content %}
