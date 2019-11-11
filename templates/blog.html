@@ -1,18 +1,43 @@
 {% extends "layout.html" %}
 
 {% block head %}
-    {{ super() }}
-    {% if title %}
-        <title>{{ title }}</title>
-    {% else %}
-        <title>Abhishek Pednekar</title>
-    {% endif %}          
+{{ super() }}
+{% if title %}
+<title>{{ title }}</title>
+{% else %}
+<title>Abhishek Pednekar</title>
+{% endif %}
 
 {% endblock head %}
 
 {% block content %}
-    <main id="blog">
-        <h1>Blog</h1>
-    </main>
-    <script type="text/javascript" src=" {{ url_for('static', filename='js/blog.js') }}"></script>
+<main id="blog">
+    <div class="blog-container">
+        <h1>My blog - <a href="https://codedisciples.in">Code Disciples</a></h1>
+        <h3>
+            <p>Code Disciples is a blog for all things code. The internet is vast and is full of great content and
+                mostly
+                awesome folks who are always willing to help. However, sometimes, we run into a real head-scratcher
+                that
+                requires rummaging through heaps of documentation or tutorials until we hit that "eureka!" moment. Most
+                blogs on Code Disciples
+                stem from such painful moments of frustration. The site provides a means for me to document topics or
+                scenarios
+                that I struggled with when I first encountered them or subjects that I simply felt would be fun to blog
+                about. I hope you find at least some of them to be useful.</p>
+
+            <p>The site is developed with <a href="http://getpelican.com/">Pelican</a>
+                and deployed using <a href="https://www.netlify.com/">Netlify</a></p>
+        </h3>
+        <div class="blog-links">
+            <h3>Here is a list of all the posts currently on the site:</h3>
+            <ol>
+                {% for blog in blogs %}
+                <li><a href="{{ blog.url }}">{{ blog.title }}</a></li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+</main>
+<script type=" text/javascript" src=" {{ url_for('static', filename='js/blog.js') }}"></script>
 {% endblock content %}

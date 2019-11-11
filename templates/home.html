@@ -1,28 +1,28 @@
 {% extends "layout.html"%}
 
 {% block head %}
-    {{ super() }}
-    <title>Abhishek Pednekar</title>
+{{ super() }}
+<title>Abhishek Pednekar</title>
 {% endblock head %}
 
 {% block content %}
-    <main id="home">
-        <h1 class="lg-heading">
-            Abhishek <span class="text-secondary">Pednekar</span>
-        </h1>
-        <h2 class="sm-heading">
-            Web Developer & Programmer
-        </h2>
-        <div class="icons">
-            <a href="https://github.com/AbhishekPednekar84" target="_blank">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-            <a href="{{ url_for('contact') }}">
-                <i class="fas fa-envelope fa-2x"></i>
-            </a>
-        </div>
-    </main>
+<main id="home">
+    <h1 class="lg-heading">
+        Abhishek <span class="text-secondary">Pednekar</span>
+    </h1>
+    <h2 class="sm-heading">
+        Web Developer & Programmer
+    </h2>
+    <div class="icons">
+        <a href="https://github.com/AbhishekPednekar84" target="_blank">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="#">
+            <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="{{ url_for('contact.contact') }}">
+            <i class="fas fa-envelope fa-2x"></i>
+        </a>
+    </div>
+</main>
 {% endblock  content %}
