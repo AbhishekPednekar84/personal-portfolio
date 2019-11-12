@@ -3,7 +3,7 @@
 {% block head %}
 {{ super() }}
 {% if title %}
-<title>{{ title }}</title>
+<title>My {{ title }}</title>
 {% else %}
 <title>Abhishek Pednekar</title>
 {% endif %}
@@ -14,32 +14,44 @@
 <main id="blog">
     <div class="blog-container">
         <h1 class="sm-heading">My blog - <a href="https://codedisciples.in"><span>Code Disciples</span></a></h1>
-          <p>Code Disciples is a blog for all things code. The internet is vast and is full of great content and
-                mostly
-                awesome folks who are always willing to help. However, sometimes, we run into a real head-scratcher
-                that
-                requires rummaging through heaps of documentation or tutorials until we hit that "eureka!" moment. Most
-                blogs on Code Disciples
-                stem from such painful moments of frustration. The site provides a means for me to document topics or
-                scenarios
-                that I struggled with when I first encountered them or subjects that I simply felt would be fun to blog
-                about. I hope you find at least some of them to be useful.</p>
+        <p>Code Disciples is a blog for all things code. The internet is vast and is full of great content and
+            mostly
+            awesome folks who are always willing to help. However, sometimes, we run into a real head-scratcher
+            that
+            requires rummaging through heaps of documentation or tutorials and abusing Q&A sites until we hit that
+            "eureka!" moment. Most
+            blogs on Code Disciples
+            stem from such painful moments of frustration. The site provides a means for me to document topics or
+            scenarios
+            that I struggled with when I first encountered them or subjects that I simply felt would be fun to blog
+            about. I hope you find at least some of them to be useful.</p>
 
-            <p>The site is developed with <a href="http://getpelican.com/"><span>Pelican</span></a>
-                and deployed using <a href="https://www.netlify.com/"><span>Netlify</span></a>.</p>
+        <p>The site is developed with <a href="http://getpelican.com/"><span>Pelican</span></a>
+            and deployed using <a href="https://www.netlify.com/"><span>Netlify</span></a>.</p>
         <div>
             {# <h3>Here is a list of all the posts currently on the site:</h3> #}
-            <ol>
-            {% for blog in blogs %}
+            <ul>
+                {% for blog in blogs.items %}
                 <li class="blog-list{{ loop.index }}">
-                    <a href="#"><span>{{ blog.title }}</span></a><br/>
+                    <span>{{ blog.title }}</span><br />
                     <div id="box{{ loop.index }}">
-                    <p>{{ blog.description }}</p>
-                    <p><a href="{{ blog.url }}" target="_blank"><span>Click here</span></a> to read the full article.</p>
-                    </div><br/>
+                        <p>{{ blog.description }}</p>
+                        <p><a href="{{ blog.url }}" target="_blank"><span>Click here</span></a> to read the full
+                            article.</p>
+                    </div><br />
                 </li>
-            {% endfor %}
-            </ol>
+                {% endfor %}
+            </ul>    
+            {# Pagination #}
+            <div class="pagination">
+            {% for page_num in blogs.iter_pages() %}
+                {% if page_num %}
+                    <a href="{{ url_for('blog.blog', page=page_num) }}">{{ page_num }}</a>
+                {% else %}
+                    ...
+                {% endif %}
+            {% endfor %}   
+            </div>  
         </div>
     </div>
 </main>

@@ -13,6 +13,6 @@ def contact():
         send_email(form.username.data, form.email.data,
                    form.subject.data, form.message.data)
         flash('Thanks! I will be in touch soon.')
-        return redirect(url_for('contact'))
+        return redirect(url_for('contact.contact'))
 
     return render_template("contact.html", title='Contact', form=form)
