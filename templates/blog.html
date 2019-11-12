@@ -13,9 +13,8 @@
 {% block content %}
 <main id="blog">
     <div class="blog-container">
-        <h1>My blog - <a href="https://codedisciples.in">Code Disciples</a></h1>
-        <h3>
-            <p>Code Disciples is a blog for all things code. The internet is vast and is full of great content and
+        <h1 class="sm-heading">My blog - <a href="https://codedisciples.in"><span>Code Disciples</span></a></h1>
+          <p>Code Disciples is a blog for all things code. The internet is vast and is full of great content and
                 mostly
                 awesome folks who are always willing to help. However, sometimes, we run into a real head-scratcher
                 that
@@ -26,18 +25,24 @@
                 that I struggled with when I first encountered them or subjects that I simply felt would be fun to blog
                 about. I hope you find at least some of them to be useful.</p>
 
-            <p>The site is developed with <a href="http://getpelican.com/">Pelican</a>
-                and deployed using <a href="https://www.netlify.com/">Netlify</a></p>
-        </h3>
-        <div class="blog-links">
-            <h3>Here is a list of all the posts currently on the site:</h3>
+            <p>The site is developed with <a href="http://getpelican.com/"><span>Pelican</span></a>
+                and deployed using <a href="https://www.netlify.com/"><span>Netlify</span></a>.</p>
+        <div>
+            {# <h3>Here is a list of all the posts currently on the site:</h3> #}
             <ol>
-                {% for blog in blogs %}
-                <li><a href="{{ blog.url }}">{{ blog.title }}</a></li>
-                {% endfor %}
+            {% for blog in blogs %}
+                <li class="blog-list{{ loop.index }}">
+                    <a href="#"><span>{{ blog.title }}</span></a><br/>
+                    <div id="box{{ loop.index }}">
+                    <p>{{ blog.description }}</p>
+                    <p><a href="{{ blog.url }}" target="_blank"><span>Click here</span></a> to read the full article.</p>
+                    </div><br/>
+                </li>
+            {% endfor %}
             </ol>
         </div>
     </div>
 </main>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script type=" text/javascript" src=" {{ url_for('static', filename='js/blog.js') }}"></script>
 {% endblock content %}

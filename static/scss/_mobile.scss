@@ -1,5 +1,10 @@
 // Wide screens
 @include mediaXl {
+    .blog-container {
+
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
 }
 
 // Desktops and laptops
@@ -59,6 +64,12 @@
         flex: 1;
     }
 
+    .blog-container {
+
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
 }
 
 
@@ -79,5 +90,7 @@
     #right {
         flex: 1;
     }
+
+
 }
 

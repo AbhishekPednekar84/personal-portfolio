@@ -13,11 +13,11 @@
 {% block content %}
 
 <body>
-   
-   
+
+
     <div id="wrapper">
         <div id="left">
-            
+
             {% with messages = get_flashed_messages() %}
             {% if messages %}
             {% for message in messages %}
@@ -96,7 +96,7 @@
         </div>
 
         <div id="right">
-<h1 class="sm-heading">References</h1>
+            <h1 class="sm-heading">References</h1>
             <div id="books">
                 <h4>Books</h4>
                 <div class="books-top">
@@ -146,7 +146,7 @@
                     <div class="pod-list">
                         <a target="_blank" href="https://talkpython.fm/">Talk Python To Me</a><br>
                         <a target="_blank" href="https://pythonbytes.fm/">Python Bytes</a><br>
-                        <a target="_blank" href="https://djangochat.com/">Django Chat</a><br>
+                        <a target="_blank" href="https://testandcode.com">Test & Code</a><br>
                     </div>
                 </div>
                 <div id="channels">
@@ -161,7 +161,7 @@
                     </div>
                 </div>
             </div>
-        <div>
-    </div>
+            <div>
+            </div>
             <script type="text/javascript" src=" {{ url_for('static', filename='js/contact.js') }}"></script>
-{% endblock content %}
+            {% endblock content %}

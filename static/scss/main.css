@@ -159,6 +159,13 @@
           transition-delay: 0.4s;
 }
 
+@media screen and (min-width: 1171px) {
+  .blog-container {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   main#home {
     -webkit-box-align: center;
@@ -212,6 +219,10 @@
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+  .blog-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
@@ -342,6 +353,15 @@ main#home {
 }
 
 main#home h1 {
+  margin-top: 10vh;
+}
+
+main#blog {
+  padding: 1rem;
+  overflow: hidden;
+}
+
+main#blog h1 {
   margin-top: 10vh;
 }
 
@@ -539,5 +559,13 @@ main#home h1 {
   text-align: center;
   line-height: 2rem;
   font-weight: 200;
+}
+
+.blog-container span {
+  color: #ffb961;
+}
+
+.blog-container .blog-description {
+  background: rgba(73, 73, 73, 0.5);
 }
 /*# sourceMappingURL=main.css.map */

@@ -89,6 +89,15 @@ main {
             margin-top: 10vh;
         }
     }
+
+    &#blog {
+        padding: 1rem;
+        overflow: hidden;
+
+        h1 {
+            margin-top: 10vh;
+        }
+    }
 }
 
 #wrapper {
@@ -265,3 +274,17 @@ main {
         }
     }
 }
+
+.blog-container {
+
+    span {
+        color: $secondary_color;
+    }
+
+    .blog-description {
+        background: rgba(lighten($color: $primary_color, 
+                        $amount: 2), 0.5);
+    }
+}
+
+
