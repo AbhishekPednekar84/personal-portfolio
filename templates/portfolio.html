@@ -13,7 +13,106 @@
 
 {% block content %}
 <main id="portfolio">
-    <h1>Portfolio</h1>
+    <h1 class="sm-heading">About
+        <span class="text-secondary">Me</span>
+    </h1>
+    <!-- Grid -->
+    <div class="about-info">
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Abhishek Pednekar" class="bio-image">
+
+        <div class="bio">
+            <h3 class="text-secondary">BIO</h3>
+            <p>With over 12 years of industry experience (6 in the USA), I have been a part of and mentored several
+                cross functional teams across different geographical locations. My experience is primarily centered
+                around the Insurance domain (Life, Disability and Annuities). Most recently, I have worked as the
+                Technology Lead for a large scale Flask migration project and the maintenance and support of critical
+                client applications.</p>
+        </div>
+
+        <div class="job job-1">
+            <h3 class="sm-heading" style="text-align: center">Skills</h3>
+            <div class="bar-container">
+                <div class="bar-lang">HTML</div>
+                <div class="bar-fill" style="width: 65%"></div>
+                <div class="bar-pct" style="width: 15%;">90%</div>
+            </div>
+            <div class="bar-container">
+                <div class="bar-lang">CSS</div>
+                <div class="bar-fill" style="width: 55%"></div>
+                <div class="bar-pct" style="width: 25%;">80%</div>
+            </div>
+            <div class="bar-container">
+                <div class="bar-lang">Python</div>
+                <div class="bar-fill" style="width: 55%"></div>
+                <div class="bar-pct" style="width: 25%;">80%</div>
+            </div>
+            <div class="bar-container">
+                <div class="bar-lang">JavaScript</div>
+                <div class="bar-fill" style="width: 26%"></div>
+                <div class="bar-pct" style="width: 54%;">40%</div>
+            </div>
+            <div class="bar-container">
+                <div class="bar-lang">Flask</div>
+                <div class="bar-fill" style="width: 55%"></div>
+                <div class="bar-pct" style="width: 25%;">80%</div>
+            </div>
+            <div class="bar-container">
+                <div class="bar-lang">Git</div>
+                <div class="bar-fill" style="width: 60%"></div>
+                <div class="bar-pct" style="width: 20%;">85%</div>
+            </div>
+            <div class="bar-container">
+                <div class="bar-lang">C#</div>
+                <div class="bar-fill" style="width: 45%"></div>
+                <div class="bar-pct" style="width: 35%;">65%</div>
+            </div>
+            <div class="bar-container">
+                <div class="bar-lang">SQL</div>
+                <div class="bar-fill" style="width: 60%"></div>
+                <div class="bar-pct" style="width: 20%;">85%</div>
+            </div>
+        </div>
+
+        <div class="job-2">
+            <div class="btn-cv">
+                <a href="{{ url_for('static', filename='cv/cv.pdf') }}" class="btn" target="_blank">
+                    <i class="fas fa-eye"></i>&nbsp;&nbsp;View my CV
+                </a>
+            </div>
+        </div>
+
+        <div class="job job-3">
+            <h3 class="sm-heading" style="text-align: center">Personal Websites</h3>
+            <div class="personal-site">
+                <ul>
+                    <li class="personal-site-list">
+                        <a href="https://abhishekpednekar.com" target="_blank">AbhishekPednekar.com</a>
+                        <p>Personal portfolio site developed using Flask, HTML, Sass, jQuery and Postgres. Site
+                            deployed on a
+                            VPS provisioned by Digital Ocean.</p>
+                    </li>
+                    <li class="personal-site-list">
+                        <a href="https://codedisciples.in" target="_blank">CodeDisciples.in</a>
+                        <p>Personal blog site developed in Pelican, HTML, CSS and Markdown. Site deployed using Netlify.
+                        </p>
+                    </li>
+                    <li class="personal-site-list">
+                        <a href="https://www.sreenathwedssreelakshmi.com"
+                            target="_blank">http://bit.ly/flask-wedding-site</a>
+                        <p>Site developed for a family member's wedding using Flask, HTML, CSS and SQLite. Site deployed
+                            on a VPS provisioned by Linode.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </main>
+<footer class="portfolio-footer main-footer">
+    &copy; 2019&nbsp;&nbsp;<b>·</b>&nbsp;&nbsp;Made with <img class="img-footer" alt="footer"
+        src="{{ url_for('static', filename='images/love.ico') }}"> in
+    Bangalore
+</footer>
+
 <script type="text/javascript" src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
 {% endblock content %}

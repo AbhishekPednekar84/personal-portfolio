@@ -14,9 +14,16 @@
 
 // Tablets
 @include mediaMd {
-    main#home {
-        align-items: center;
-        text-align: center;
+    main {
+        
+        &#home {
+            align-items: center;
+            text-align: center;
+        }
+
+        &#contact {
+            padding: 1rem;
+        }
 
         .lg-heading {
             line-height: 1;
@@ -58,10 +65,12 @@
 
     #left {
         flex: 1;
+        margin: 0;
+        padding: 0.5rem;
     }
 
     #right {
-        flex: 1;
+        display: none;
     }
 
     .blog-container {
@@ -70,26 +79,37 @@
         margin-right: 2rem;
     }
 
+    .about-info {
+        grid-template-areas: 
+        "bio-image"
+        "bio"
+        "job2"
+        "job1"
+        "job3";
+        grid-auto-columns: 1fr;
+    }
+
+    .job-1 {
+        margin-top: 40px;
+    }
+
 }
 
 
 // Smartphones
 @include mediaSm {
-    main#home {
-        margin-top: 10vh;
-    }
 
-    #wrapper {
-        flex-direction: column;
-    }
+    // #wrapper {
+    //     flex-direction: column;
+    // }
 
-    #left {
-        flex: 1;
-    }
+    // #left {
+    //     flex: 1; 
+    // }
 
-    #right {
-        flex: 1;
-    }
+    // #right {
+    //     display: none;
+    // }
 
 
 }
