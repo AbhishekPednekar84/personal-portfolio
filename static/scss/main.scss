@@ -265,6 +265,7 @@ main {
 
                 &:hover {
                     color: gold;
+                    @include easeOut;
                 }
             }
         }
@@ -289,6 +290,7 @@ main {
     
                     &:hover {
                         color: gold;
+                        @include easeOut;
                     }
                 }
             }
@@ -304,6 +306,7 @@ main {
 
         &:hover {
             color: gold;
+            @include easeOut;
         }
     }
 
@@ -331,6 +334,7 @@ main {
         a:hover {
             color: $primary_color;
             background: $secondary_color;
+            @include easeOut;
         }
     }
 }
@@ -339,18 +343,43 @@ main {
     display: grid;
     grid-gap: 30px;
     grid-template-areas: 
-    "bio-image bio bio"
-    "job1 job2 job3";
-    // grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: 2fr 1fr 2fr;
+    "bio-img-cv bio bio"
+    "job1 job1 job3";
+    grid-template-columns: repeat(3, 1fr), min-content;
+    //grid-template-columns: 2fr, 1fr, 1fr;
 
-    .bio-image {
-        grid-area: bio-image;
-        border-radius: 70%;
-        border: $secondary_color 3px solid;
+    .bio-img-cv {
         margin: auto;
+
+        .bio-image {
+            grid-area: bio-image;
+            border-radius: 70%;
+            border: $secondary_color 3px solid;
+            //margin: auto;
+        }
+
+        .bio-cv-div {
+            margin-top: 1rem;
+        }
+
+        .btn-cv {
+            display: block;
+            margin: auto;
+            text-align: center;
+            background: darken($primary_color, 7);
+            padding: 0.5rem;
+            @include easeOut;
+                
+        
+            &:hover {
+                background: $secondary-color;
+                color: darken($primary_color, 7);
+                @include easeOut;
+            }
+        }
     }
     
+       
     .bio {
         grid-area: bio;
         font-size: 1.5rem;
@@ -360,10 +389,10 @@ main {
         grid-area: job1;
     }
     
-    .job-2 {
-        grid-area: job2;
-        position: relative;
-    }
+    // .job-2 {
+    //     grid-area: job2;
+    //     position: relative;
+    // }
     
     .job-3 {
         grid-area: job3;
@@ -379,14 +408,15 @@ main {
 .bar-container {
 
     display: flex;
-    margin: 15px 0;
+    margin: 15px 15px;
 
     .bar-container div {
         border: 2px solid $primary_color;
     }
 
     .bar-lang {
-        width: 20%;
+        width: 25%;
+        font-size: 1rem;
         background: darken($primary-color, 5);
         text-align: center;
         height: 28px;
@@ -401,7 +431,8 @@ main {
         background: #fff;
         height: 28px;
         color: darken($primary_color, 5);
-        text-align: center;
+        text-align: right;
+        padding-right: 10px;
     }
 }
 
@@ -418,29 +449,10 @@ main {
     
             &:hover {
                 color: gold;
+                @include easeOut;
             }
         }
     }    
-}
-
-//Button in the portfolio section
-.btn-cv {
-    position: absolute;
-    margin: 0;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-
-    .btn {
-        display: block;
-        background: darken($primary_color, 7);
-        padding: 0.5rem;
-
-        &:hover {
-            background: $secondary-color;
-            color: darken($primary_color, 7);
-        }
-    }
 }
 
 

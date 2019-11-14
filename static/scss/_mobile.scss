@@ -25,6 +25,10 @@
             padding: 1rem;
         }
 
+        &#portfolio {
+            padding: 1rem;
+        }
+
         .lg-heading {
             line-height: 1;
             margin-bottom: 1rem;
@@ -80,19 +84,34 @@
     }
 
     .about-info {
-        grid-template-areas: 
-        "bio-image"
-        "bio"
-        "job2"
-        "job1"
-        "job3";
-        grid-auto-columns: 1fr;
+        // grid-template-areas: 
+        // "bio-image"
+        // "bio"
+        // "job1"
+        // "job3";
+        // grid-auto-columns: 1fr;
+        // align-items: center;
+
+        display: flex;
+        flex-direction: column;
     }
 
-    .job-1 {
-        margin-top: 40px;
+    .bar-lang {
+        font-size: 4px;
+        padding: 1px;
     }
 
+    .bar-pct {  
+        font-size: 80%;
+        padding-top: 5px;
+        padding-right: 5px;
+    }
+
+    .job {
+        margin-top: 10px;
+    }
+
+    
 }
 
 
@@ -110,7 +129,5 @@
     // #right {
     //     display: none;
     // }
-
-
 }
 
