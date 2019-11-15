@@ -91,22 +91,26 @@ main {
     }
 
     &#blog {
-        padding: 1rem;
         overflow: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
 
         h1 {
             margin-top: 10vh;
         }
     }
 
-    // &#portfolio {
-    //     min-height: calc(100vh - 60px);
-    // }
+    &#portfolio {
+        margin-top: 10vh;
+    }
+
+    &#contact {
+        margin-top: 10vh;
+    }
 }
 
 #wrapper {
     display: flex;
-    margin-top: 15vh;
 } 
 
 #left {
@@ -134,7 +138,7 @@ main {
 
     .text-input {
         width: 100%;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
         height: 50px;
         padding: 0.5rem 1rem;
         border: 0.5px solid $primary_color;
@@ -150,7 +154,7 @@ main {
         width: 100%;
         margin-bottom: 2rem;
         padding: 0.5rem 1rem;
-        height: 170px;
+        height: 200px;
         border: 0.5px solid $primary_color;
         border-radius: 3px;
         background: rgba(lighten($color: $primary_color, 
@@ -167,7 +171,7 @@ main {
         background: rgba(darken($color: $primary_color, 
         $amount: 4), $background-opacity);
         border: 0.5px solid $primary_color;
-        border-radius: 3px;
+        //border-radius: 3px;
         padding: 0.7rem 1rem;
         color: #fff;
         font-weight: bold;
@@ -200,7 +204,7 @@ main {
         color: $secondary_color;
         text-align: left;
         margin-top: 0;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
         padding: 0;
     }    
 }

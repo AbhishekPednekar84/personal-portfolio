@@ -269,11 +269,20 @@ main#home h1 {
 }
 
 main#blog {
-  padding: 1rem;
   overflow: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 main#blog h1 {
+  margin-top: 10vh;
+}
+
+main#portfolio {
+  margin-top: 10vh;
+}
+
+main#contact {
   margin-top: 10vh;
 }
 
@@ -281,7 +290,6 @@ main#blog h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 15vh;
 }
 
 #left {
@@ -311,7 +319,7 @@ main#blog h1 {
 
 #left .text-input {
   width: 100%;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   height: 50px;
   padding: 0.5rem 1rem;
   border: 0.5px solid #444;
@@ -326,7 +334,7 @@ main#blog h1 {
   width: 100%;
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
-  height: 170px;
+  height: 200px;
   border: 0.5px solid #444;
   border-radius: 3px;
   background: rgba(99, 99, 99, 0.9);
@@ -341,7 +349,6 @@ main#blog h1 {
   height: 2.5rem;
   background: rgba(58, 58, 58, 0.9);
   border: 0.5px solid #444;
-  border-radius: 3px;
   padding: 0.7rem 1rem;
   color: #fff;
   font-weight: bold;
@@ -375,7 +382,7 @@ main#blog h1 {
   color: #ffb961;
   text-align: left;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   padding: 0;
 }
 
@@ -744,7 +751,7 @@ main#blog h1 {
             flex-direction: column;
   }
   .bar-lang {
-    font-size: 4px;
+    font-size: 3px;
     padding: 1px;
   }
   .bar-pct {
@@ -754,6 +761,16 @@ main#blog h1 {
   }
   .job {
     margin-top: 10px;
+  }
+  .text-input {
+    margin-bottom: 1rem;
+  }
+  .bio {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+  .pagination {
+    margin-bottom: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
