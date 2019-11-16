@@ -84,16 +84,17 @@
     }
 
     .about-info {
-        // grid-template-areas: 
-        // "bio-image"
-        // "bio"
-        // "job1"
-        // "job3";
-        // grid-auto-columns: 1fr;
+        grid-template-areas: 
+        "bio-image"
+        "bio"
+        "job1"
+        "job3";
+        grid-template-columns: minmax(auto, 40em);
+        grid-auto-columns: 1fr;
         // align-items: center;
 
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
     }
 
     .bar-lang {

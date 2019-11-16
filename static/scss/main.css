@@ -612,7 +612,7 @@ main#contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 15px 15px;
+  margin: 25px 15px;
 }
 
 .bar-container .bar-container div {
@@ -742,13 +742,10 @@ main#contact {
     margin-right: 2rem;
   }
   .about-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        grid-template-areas: "bio-image" "bio" "job1" "job3";
+    -ms-grid-columns: minmax(auto, 40em);
+        grid-template-columns: minmax(auto, 40em);
+    grid-auto-columns: 1fr;
   }
   .bar-lang {
     font-size: 3px;

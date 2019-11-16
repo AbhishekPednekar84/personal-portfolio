@@ -28,11 +28,11 @@
 
         <p>The site is developed with <a href="http://getpelican.com/"><span>Pelican</span></a>
             and deployed using <a href="https://www.netlify.com/"><span>Netlify</span></a>.</p>
-        <div>
+        <div class="blog-list">
             {# <h3>Here is a list of all the posts currently on the site:</h3> #}
             <ul>
                 {% for blog in blogs.items %}
-                <li class="blog-list{{ loop.index }}">
+                <li class="blog{{ loop.index }}" style="list-style: square;">
                     <span>{{ blog.title }}</span><br />
                     <div id="box{{ loop.index }}">
                         <p>{{ blog.description }}</p>
