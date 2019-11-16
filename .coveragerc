@@ -1,6 +1,6 @@
 [run]
 branch = True
-omit = /home/travis/virtualenv/*
+omit = /home/travis/virtualenv/*, tests/*
 
 [report]
 exclude_lines = 
