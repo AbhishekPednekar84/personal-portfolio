@@ -7,5 +7,5 @@ install:
 script: 
   - coverage run -m tests.test_app
 after_success:
-  - covergae report -m
+  - covergae report
   - coveralls
