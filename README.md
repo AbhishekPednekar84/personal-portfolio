@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/AbhishekPednekar84/personal-portfolio.svg?branch=master)](https://travis-ci.org/AbhishekPednekar84/personal-portfolio) [![Coverage Status](https://coveralls.io/repos/github/AbhishekPednekar84/personal-portfolio/badge.svg?branch=master)](https://coveralls.io/github/AbhishekPednekar84/personal-portfolio?branch=master)
 
-This is my personal portfolio site developed using Flask and Sass with a little bit of jQuery. Base layout credits go to [Traversy Media](TraversyMedia.com).
+This is my personal portfolio site developed using Flask and Sass with a little bit of jQuery. Base layout credits go to [Traversy Media](https://TraversyMedia.com).
 
 ## Steps to run a local setup
 
