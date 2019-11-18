@@ -1,0 +1,27 @@
+server {
+        server_name www.<domain>.com;
+
+        location /static {
+                        alias /home/<user>/portfolio/static;
+        }
+
+        location / {
+                proxy_pass http://localhost:8000;
+                include /etc/nginx/proxy_params;
+                proxy_redirect off;
+        }
+
+}
+
+server {
+        server_name <domain>.com;
+
+        location /static {
+                        alias /home/<user>/portfolio/static;
+        }
+
+        location / {
+                proxy_pass http://localhost:8000;
+                include /etc/nginx/proxy_params;
+                proxy_redirect off;
+        }
