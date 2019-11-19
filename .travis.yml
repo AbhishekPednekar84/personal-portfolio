@@ -9,3 +9,5 @@ script:
 after_success:
   - covergae report
   - coveralls
+notifications:
+  slack: cyborged:37K3wQ7qoWjZ1FM2cf7TdJTC
