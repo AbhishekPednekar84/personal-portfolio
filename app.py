@@ -16,7 +16,6 @@ def create_app(config_class=Config):
     from views import contact
     from views import main
     from views import portfolio
-    from views import search
 
     # from api import search as search_api
 
@@ -24,7 +23,7 @@ def create_app(config_class=Config):
     app.register_blueprint(contact.contact_blueprint)
     app.register_blueprint(main.main_blueprint)
     app.register_blueprint(portfolio.portfolio_blueprint)
-    app.register_blueprint(search.search_blueprint)
+    # app.register_blueprint(search.search_blueprint)
     # app.register_blueprint(search_api.search_blueprint)
 
     return app
