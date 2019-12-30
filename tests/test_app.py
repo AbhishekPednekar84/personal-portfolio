@@ -95,3 +95,12 @@ class TestCases(BaseTestCase):
             "Test Joe", "TestJoe", "Test Subject", "This is a test message"
         )
         self.assertTrue(b"Invalid email address.", response.data)
+
+    # def test_search_api_with_id(self):
+    #     response = client.get("/api/search/1")
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertIn(b"Testing a Portfolio site", response.data)
+
+    # def test_search_api_for_all_articles(self):
+    #     response = client.get("/api/search_all")
+    #     self.assertEqual(response.status_code, 308)

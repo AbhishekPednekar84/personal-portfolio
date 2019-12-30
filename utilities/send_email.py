@@ -5,9 +5,9 @@ from email.message import EmailMessage
 
 
 def send_email(caller_name, caller_email, caller_subject, caller_message):
-    sender_email = os.environ.get("EMAIL_USER")
-    recipient_email = "abhi_ap@hotmail.com"
+    sender_email = os.getenv("EMAIL_USER")
     password = os.environ.get("EMAIL_PASS")
+    recipient_email = os.getenv("RECIPIENT_EMAIL")
     port = 465
     smtp_server = "smtp.gmail.com"
 
