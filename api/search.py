@@ -1,17 +1,19 @@
 import string
-from flask import request, abort
-from flask_restplus import Namespace, Resource, fields
+from flask import request, abort, Blueprint
+from flask_restplus import Api, Resource, fields
 from extensions import db
 from models.blog import Blog
 from sqlalchemy.exc import ProgrammingError, OperationalError
 
-# search_blueprint = Blueprint("search_api",
-#                              __name__,
-#                              url_prefix="/api")
+search_blueprint = Blueprint("search_api", __name__)
 
-api = Namespace(
-    "Code Disciples Blog Search - ",
-    description="Search blog posts on CodeDisciples.in",
+api = Api(
+    search_blueprint,
+    doc="/apidoc",
+    title="Code Disciples Search API",
+    description="API endpoints to search posts listed on CodeDisciples.in",
+    default="Code Disciples Blog Search - ",
+    default_label="Search blog posts on CodeDisciples.in",
 )
 
 model = api.model(
