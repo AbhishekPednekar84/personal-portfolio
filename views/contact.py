@@ -1,6 +1,6 @@
 from flask import Blueprint, flash, redirect, url_for, render_template
 from forms.contact import ContactForm
-from utilities.send_email import send_email
+from utilities.tasks import send_email
 
 contact_blueprint = Blueprint("contact", __name__, template_folder="templates")
 
@@ -9,7 +9,7 @@ contact_blueprint = Blueprint("contact", __name__, template_folder="templates")
 def contact():
     form = ContactForm()
     if form.validate_on_submit():
-        send_email(
+        send_email.delay(
             form.username.data,
             form.email.data,
             form.subject.data,

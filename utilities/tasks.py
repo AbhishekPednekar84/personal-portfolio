@@ -2,8 +2,12 @@ import os
 import smtplib
 import ssl
 from email.message import EmailMessage
+from celery_app import create_celery_app
+
+celery = create_celery_app()
 
 
+@celery.task
 def send_email(caller_name, caller_email, caller_subject, caller_message):
     sender_email = os.getenv("EMAIL_USER")
     password = os.environ.get("EMAIL_PASS")
