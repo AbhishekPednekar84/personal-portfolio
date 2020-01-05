@@ -87,7 +87,7 @@
                 <ul>
                     <li class="personal-site-list">
                         <a href="https://abhishekpednekar.com" target="_blank">AbhishekPednekar.com</a>
-                        <p>Personal portfolio site developed using Flask, HTML, Sass, jQuery and Postgres. Site
+                        <p>Personal portfolio site developed using Flask, HTML, Sass, jQuery, Redis and Postgres. Site
                             deployed on a
                             droplet provisioned by Digital Ocean. <a
                                 href="https://github.com/AbhishekPednekar84/personal-portfolio">Click here</a> to view
@@ -122,7 +122,7 @@
 
 </main>
 <footer class="portfolio-footer main-footer">
-    &copy; 2019&nbsp;&nbsp;<b>·</b>&nbsp;&nbsp;Made with <img class="img-footer" alt="footer"
+    &copy; {{ year }}&nbsp;&nbsp;<b>·</b>&nbsp;&nbsp;Made with <img class="img-footer" alt="footer"
         src="{{ url_for('static', filename='images/love.ico') }}"> in
     Bangalore
 </footer>

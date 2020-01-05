@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request
 from extensions import db
 from models.blog import Blog
+from app import get_current_year
 
 
 blog_blueprint = Blueprint("blog", __name__, template_folder="templates")
@@ -15,4 +16,4 @@ def blog():
         .order_by(Blog.id.desc())
         .paginate(page=page, per_page=4)
     )
-    return render_template("blog.html", title="Blog", blogs=blogs)
+    return render_template("blog.html", title="Blog", blogs=blogs, year=get_current_year())

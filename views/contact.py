@@ -1,6 +1,7 @@
 from flask import Blueprint, flash, redirect, url_for, render_template
 from forms.contact import ContactForm
 from utilities.tasks import send_email
+from app import get_current_year
 
 contact_blueprint = Blueprint("contact", __name__, template_folder="templates")
 
@@ -18,4 +19,4 @@ def contact():
         flash("Thanks! I will be in touch soon.")
         return redirect(url_for("contact.contact"))
 
-    return render_template("contact.html", title="Contact", form=form)
+    return render_template("contact.html", title="Contact", form=form, year=get_current_year())
