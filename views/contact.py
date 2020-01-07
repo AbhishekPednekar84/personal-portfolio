@@ -8,6 +8,13 @@ contact_blueprint = Blueprint("contact", __name__, template_folder="templates")
 
 @contact_blueprint.route("/contact", methods=["GET", "POST"])
 def contact():
+    """
+    View method to render the contact.html page - https://www.abhishekpednekar.com/contact
+
+    Returns
+    -------
+    contact.html: html / jinja2 template
+    """
     form = ContactForm()
     if form.validate_on_submit():
         send_email.delay(
@@ -19,4 +26,6 @@ def contact():
         flash("Thanks! I will be in touch soon.")
         return redirect(url_for("contact.contact"))
 
-    return render_template("contact.html", title="Contact", form=form, year=get_current_year())
+    return render_template(
+        "contact.html", title="Contact", form=form, year=get_current_year()
+    )

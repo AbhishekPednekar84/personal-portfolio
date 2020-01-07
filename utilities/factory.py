@@ -5,6 +5,13 @@ from celery import Celery
 
 
 def make_celery(app):
+    """
+    Returns a celery instance
+
+    Returns
+    -------
+    celery: object
+    """
     # app = app or create_app()
     celery = Celery(app.import_name, broker=config.Config.CELERY_BROKER_URL)
     celery.conf.update(app.config)
