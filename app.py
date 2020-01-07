@@ -6,6 +6,17 @@ from datetime import datetime
 
 
 def create_app(config_class=Config):
+    """
+    Returns the flask application instance
+
+    Parameters
+    ----------
+    config_class: class
+
+    Returns
+    -------
+    app: object
+    """
     app = Flask(__name__)
     app.config.from_object(Config)
     db.init_app(app)
@@ -32,7 +43,7 @@ def get_current_year():
 
     Returns
     -------
-    current_year: datetime
+    current_year: int
     """
     current_year = datetime.now().year
     return current_year

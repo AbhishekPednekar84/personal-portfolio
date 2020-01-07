@@ -9,6 +9,16 @@ celery = create_celery_app()
 
 @celery.task
 def send_email(caller_name, caller_email, caller_subject, caller_message):
+    """
+    Method to send an email based on the details provided on the contact me page
+
+    Parameters
+    ----------
+    caller_name: name of the individual contacting me
+    caller_email: email of the individual contacting me
+    caller_subject: email subject provided by the individual
+    caller_message: email message provided by the individual
+    """
     sender_email = os.getenv("EMAIL_USER")
     password = os.environ.get("EMAIL_PASS")
     recipient_email = os.getenv("RECIPIENT_EMAIL")

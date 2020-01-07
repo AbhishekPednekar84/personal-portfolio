@@ -8,4 +8,13 @@ portfolio_blueprint = Blueprint(
 
 @portfolio_blueprint.route("/portfolio")
 def portfolio():
-    return render_template("portfolio.html", title="Portfolio", year=get_current_year())
+    """
+    View method to render the portfolio.html page - https://www.abhishekpednekar.com/portfolio
+
+    Returns
+    -------
+    portfolio.html: html / jinja2 template
+    """
+    return render_template(
+        "portfolio.html", title="Portfolio", year=get_current_year()
+    )

@@ -30,7 +30,19 @@ model = api.model(
 class Search(Resource):
     @api.marshal_with(model, envelope="blog_posts")
     def get(self, id):
+        """
+        Get method to return a blog post by the id column in the blog model
 
+        Example - https://www.abhishekpednekar.com/api/search/1
+
+        Returns
+        -------
+        blog: dict
+
+        Raises
+        ------
+        HTTP 400: Bad request
+        """
         try:
             result = Blog.query.get(id)
 
@@ -51,6 +63,19 @@ class Search(Resource):
 class SearchAll(Resource):
     @api.marshal_with(model)
     def get(self):
+        """
+        Get method to return all the blog posts blog model
+
+        URL: https://www.abhishekpednekar.com/api/search_all/
+
+        Returns
+        -------
+        blog: dict
+
+        Raises
+        ------
+        HTTP 404: Articles not found
+        """
         blog_results = []
 
         try:
@@ -70,6 +95,19 @@ class SearchAll(Resource):
     @api.marshal_with(model)
     @api.param("q", "A keyword to search with (Ex: Python, Python-Docker)")
     def get(self):
+        """
+        Get method to perform a full text search based on the description_token column in the blog model
+
+        Example - https://www.abhishekpednekar.com/api/search?q=Python
+
+        Returns
+        -------
+        blog: dict
+
+        Raises
+        ------
+        HTTP 400: Bad request
+        """
         blog_results = []
         q = str(request.args.get("q", type=str))
 
