@@ -456,6 +456,10 @@ main {
                 @include easeOut;
             }
         }
+
+        p {
+            margin-top: 0;
+        }
     }    
 }
 

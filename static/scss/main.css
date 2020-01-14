@@ -658,6 +658,10 @@ main#contact {
   transition: all 0.75s ease-out;
 }
 
+.personal-site .personal-site-list p {
+  margin-top: 0;
+}
+
 .main-footer {
   text-align: center;
   padding: 1rem;
