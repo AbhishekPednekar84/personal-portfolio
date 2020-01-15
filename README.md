@@ -10,9 +10,10 @@ This is my personal portfolio site developed using Flask and Sass with a little 
 2. Create and activate a virtual rnvironment
 3. Install dependencies - `python -m pip install -r requirements.txt`
 4. Create a **.env** file (refer to the **.env.example** file) containing the Flask `SECRET_KEY`, `SQLALCHEMY_DATABASE_URI`, `EMAIL_USER`, `EMAIL_PASS` and `EMAIL_RECIPIENT` values.
-5. To discover and run tests - `python -m unittest discover tests`
+5. To discover and run unit tests - `python -m unittest discover tests`
 6. To evaluate code coverage - `coverage run -m tests.test_app`
 7. To run a coverage report - `coverage report -m`
 8. To run the application - `python app.py`
+9. To run the browser automation tests (on Chrome) - Install the latest Chrome webdriver and run `python -m browser_automation.automation_tests.py`
 
 Note: Remember to `omit` your virtual environment directory in **.coveragerc** before running `coverage report -m`
