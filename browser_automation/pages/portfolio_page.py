@@ -1,6 +1,7 @@
 from browser_automation.pages.base_element import BaseElement
 from browser_automation.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
+from browser_automation.pages.locator import Locator
 
 
 class PortfolioPage(BasePage):
@@ -9,5 +10,5 @@ class PortfolioPage(BasePage):
 
     @property
     def cv_button(self):
-        locator = (By.CSS_SELECTOR, "a.btn-cv")
-        return BaseElement(driver=self.driver, by=locator[0], value=locator[1])
+        locator = Locator(by=By.CSS_SELECTOR, value="a.btn-cv")
+        return BaseElement(driver=self.driver, locator=locator)
