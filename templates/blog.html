@@ -26,8 +26,8 @@
             that I struggled with when I first encountered them or subjects that I simply felt would be fun to blog
             about. I hope you find at least some of them to be useful.</p>
 
-        <p>The site is developed with <a href="http://getpelican.com/"><span>Pelican</span></a>
-            and deployed using <a href="https://www.netlify.com/"><span>Netlify</span></a>.</p>
+        <p>The site is developed with <a href="http://getpelican.com/" target="_blank" rel="noreferrer"><span>Pelican</span></a>
+            and deployed using <a href="https://www.netlify.com/" target="_blank" rel="noreferrer"><span>Netlify</span></a>.</p>
         <div class="blog-list">
             {# <h3>Here is a list of all the posts currently on the site:</h3> #}
             <ul>
@@ -36,8 +36,7 @@
                     <span>{{ blog.title }}</span><br />
                     <div id="box{{ loop.index }}">
                         <p>{{ blog.description }}</p>
-                        <p><a href="{{ blog.url }}" target="_blank"><span>Click here</span></a> to read the full
-                            article.</p>
+                        <p><a href="{{ blog.url }}" target="_blank" rel="noreferrer"><span>Full article.</span></a></p>
                     </div><br />
                 </li>
                 {% endfor %}
@@ -60,6 +59,10 @@
         src="{{ url_for('static', filename='images/love.ico') }}"> in
     Bangalore
 </footer>
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
 <script type=" text/javascript" src=" {{ url_for('static', filename='js/blog.js') }}"></script>
 {% endblock content %}
