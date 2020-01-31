@@ -26,12 +26,14 @@ def create_app(config_class=Config):
     from views import contact
     from views import main
     from views import portfolio
+    from views import sitemap
     from api.search import search_blueprint
 
     app.register_blueprint(blog.blog_blueprint)
     app.register_blueprint(contact.contact_blueprint)
     app.register_blueprint(main.main_blueprint)
     app.register_blueprint(portfolio.portfolio_blueprint)
+    app.register_blueprint(sitemap.sitemap_blueprint)
     app.register_blueprint(search_blueprint, url_prefix="/api")
 
     return app
