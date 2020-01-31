@@ -17,3 +17,10 @@ This is my personal portfolio site developed using Flask and Sass with a little 
 9. To run the browser automation tests (on Chrome) - Install the latest Chrome webdriver and run `python -m browser_automation.automation_tests.py`
 
 Note: Remember to `omit` your virtual environment directory in **.coveragerc** before running `coverage report -m`
+
+## Steps to deploy the application
+1. **Heroku** - https://codedisciples.in/flask-heroku.html
+2. **Virtual Private Server** - 
+   + https://codedisciples.in/linux-vps-deployment1.html
+   + https://codedisciples.in/linux-vps-deployment2.html
+    
