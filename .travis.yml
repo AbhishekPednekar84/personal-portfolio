@@ -7,7 +7,7 @@ install:
 script: 
   - coverage run -m tests.test_app
 after_success:
-  - covergae report
+  - coverage report
   - coveralls
 notifications:
   slack: cyborged:37K3wQ7qoWjZ1FM2cf7TdJTC
