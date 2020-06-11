@@ -1,140 +1,212 @@
-{% extends "layout.html" %}
-
-{% block head %}
-{{ super() }}
-
-{% if title %}
+{% extends "layout.html" %} {% block head %} {{ super() }} {% if title %}
 <title>My {{ title }}</title>
 {% else %}
 <title>Abhishek Pednekar</title>
-{% endif %}
-
-{% endblock head %}
-
-{% block content %}
+{% endif %} {% endblock head %} {% block content %}
 <main id="portfolio">
-    <h1 class="sm-heading">About
-        <span class="text-secondary">Me</span>
-    </h1>
-    <!-- Grid -->
-    <div class="about-info">
-        <div class="bio-img-cv">
-            <div>
-                <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Abhishek Pednekar"
-                    class="bio-image">
-            </div>
-            <div class="bio-cv-div">
-                <a href="{{ url_for('static', filename='cv/Abhishek_Pednekar.pdf') }}" target="_blank" class="btn-cv">
-                    <i class="fas fa-eye"></i>&nbsp;&nbsp;View my CV </a>
-            </div>
-        </div>
-
-        <div class="bio">
-            <h3 class="text-secondary">BIO</h3>
-            <p>Hands-on, result-oriented and highly motivated application developer and programmer. I have worked with
-                and mentored cross-functional teams of varying sizes across geographical locations. For me, user
-                experience and customer satisfaction are paramount and I, therefore always strive to deliver
-                feature-rich, user-friendly, responsive and visually appealing applications.</p>
-        </div>
-
-        <div class="job job-1">
-            <h3 class="sm-heading" style="text-align: center">Skills</h3>
-            <div class="bar-container">
-                <div class="bar-lang">HTML</div>
-                <div class="bar-fill" style="width: 60%"></div>
-                <div class="bar-pct" style="width: 15%;">90%</div>
-            </div>
-            <div class="bar-container">
-                <div class="bar-lang">CSS</div>
-                <div class="bar-fill" style="width: 50%"></div>
-                <div class="bar-pct" style="width: 25%;">80%</div>
-            </div>
-            <div class="bar-container">
-                <div class="bar-lang">Python</div>
-                <div class="bar-fill" style="width: 50%"></div>
-                <div class="bar-pct" style="width: 25%;">80%</div>
-            </div>
-            <div class="bar-container">
-                <div class="bar-lang">JavaScript</div>
-                <div class="bar-fill" style="width: 21%"></div>
-                <div class="bar-pct" style="width: 54%;">40%</div>
-            </div>
-            <div class="bar-container">
-                <div class="bar-lang">Flask</div>
-                <div class="bar-fill" style="width: 50%"></div>
-                <div class="bar-pct" style="width: 25%;">80%</div>
-            </div>
-            <div class="bar-container">
-                <div class="bar-lang">Django</div>
-                <div class="bar-fill" style="width: 40%"></div>
-                <div class="bar-pct" style="width: 35%;">65%</div>
-            </div>
-            <div class="bar-container">
-                <div class="bar-lang">Git</div>
-                <div class="bar-fill" style="width: 55%"></div>
-                <div class="bar-pct" style="width: 20%;">85%</div>
-            </div>
-            <div class="bar-container">
-                <div class="bar-lang">C#</div>
-                <div class="bar-fill" style="width: 35%"></div>
-                <div class="bar-pct" style="width: 40%;">60%</div>
-            </div>
-            <div class="bar-container">
-                <div class="bar-lang">SQL</div>
-                <div class="bar-fill" style="width: 55%"></div>
-                <div class="bar-pct" style="width: 20%;">85%</div>
-            </div>
-        </div>
-
-        <div class="job job-3">
-            <h3 class="sm-heading" style="text-align: center">Sites Developed and Maintained by Me</h3>
-            <div class="personal-site">
-                <ul>
-                    <li class="personal-site-list">
-                        <a href="https://coronamythbusters.com">CoronaMythBusters.com</a>
-                        <p>A COVID-19 awareness site created in Django, HTML, CSS, jQuery, Redis and PostgreSQL. The
-                            site is deployed on a Digital Ocean droplet.
-                            <a href="https://github.com/AbhishekPednekar84/project-covid19" target="_blank" rel="noreferrer">View</a> the repository on Github.</p>
-                    </li>
-                    <li class="personal-site-list">
-                        <a href="https://abhishekpednekar.com">AbhishekPednekar.com</a>
-                        <p>Personal portfolio site developed using Flask, HTML, Sass, jQuery, Redis and PostgreSQL. Site
-                            deployed on a Digital Ocean droplet. <a
-                                href="https://github.com/AbhishekPednekar84/personal-portfolio" target="_blank" rel="noreferrer">View</a> the repository on Github.</p>
-                    </li>
-                    <li class="personal-site-list">
-                        <a href="https://codedisciples.in" target="_blank" rel="noreferrer">CodeDisciples.in</a>
-                        <p>Personal blog site developed in Pelican, HTML, CSS and Markdown. Site deployed using Netlify.
-                            <a href="https://github.com/AbhishekPednekar84/personal-blog-site" target="_blank" rel="noreferrer">View</a>
-                            the repository on Github.
-                        </p>
-                    </li>
-                    <li class="personal-site-list">
-                        <a href="https://abhishekpednekar.com/api/apidoc" target="_blank" rel="noreferrer">CodeDisciples REST API</a>
-                        <p>A Flask REST API with full text search feature to lookup articles on <a
-                                href="https://codedisciples.in" target="_blank" rel="noreferrer">CodeDisciples.in</a>.
-                            <a
-                                href="https://github.com/AbhishekPednekar84/personal-portfolio/tree/portfolio-page-updates/api">View</a> the repository on Github.
-                        </p>
-                    </li>
-                    <li class="personal-site-list">
-                        <a href="https://www.sreenathwedssreelakshmi.com"
-                            target="_blank" rel="noreferrer">http://bit.ly/flask-wedding-site</a>
-                        <p>Site developed for a family member's wedding using Flask, HTML, CSS and SQLite. Site deployed
-                            on a nanode provisioned by Linode. <a
-                                href="https://github.com/AbhishekPednekar84/wedding-site" target="_blank" rel="noreferrer">View</a> the repository on Github.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <h1 class="sm-heading">
+    About
+    <span class="text-secondary">Me</span>
+  </h1>
+  <!-- Grid -->
+  <div class="about-info">
+    <div class="bio-img-cv">
+      <div>
+        <img
+          src="{{ url_for('static', filename='images/profile.jpg') }}"
+          alt="Abhishek Pednekar"
+          class="bio-image"
+        />
+      </div>
+      <div class="bio-cv-div">
+        <a
+          href="{{ url_for('static', filename='cv/Abhishek_Pednekar.pdf') }}"
+          target="_blank"
+          class="btn-cv"
+        >
+          <i class="fas fa-eye"></i>
+          &nbsp;&nbsp;View my CV
+        </a>
+      </div>
     </div>
 
+    <div class="bio">
+      <h3 class="text-secondary">BIO</h3>
+      <p>
+        Hands-on, result-oriented and highly motivated application developer and
+        programmer. I have worked with and mentored cross-functional teams of
+        varying sizes across geographical locations. For me, user experience and
+        customer satisfaction are paramount and I, therefore always strive to
+        deliver feature-rich, user-friendly, responsive and visually appealing
+        applications.
+      </p>
+    </div>
+
+    <div class="job job-1">
+      <h3 class="sm-heading" style="text-align: center;">Skills</h3>
+      <div class="bar-container">
+        <div class="bar-lang">HTML</div>
+        <div class="bar-fill" style="width: 60%;"></div>
+        <div class="bar-pct" style="width: 15%;">90%</div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-lang">CSS</div>
+        <div class="bar-fill" style="width: 50%;"></div>
+        <div class="bar-pct" style="width: 25%;">80%</div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-lang">Python</div>
+        <div class="bar-fill" style="width: 50%;"></div>
+        <div class="bar-pct" style="width: 25%;">80%</div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-lang">JavaScript</div>
+        <div class="bar-fill" style="width: 35%;"></div>
+        <div class="bar-pct" style="width: 40%;">60%</div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-lang">Flask</div>
+        <div class="bar-fill" style="width: 50%;"></div>
+        <div class="bar-pct" style="width: 25%;">80%</div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-lang">Django</div>
+        <div class="bar-fill" style="width: 45%;"></div>
+        <div class="bar-pct" style="width: 30%;">70%</div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-lang">Git</div>
+        <div class="bar-fill" style="width: 55%;"></div>
+        <div class="bar-pct" style="width: 20%;">85%</div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-lang">C#</div>
+        <div class="bar-fill" style="width: 35%;"></div>
+        <div class="bar-pct" style="width: 40%;">60%</div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-lang">React.js</div>
+        <div class="bar-fill" style="width: 40%;"></div>
+        <div class="bar-pct" style="width: 35%;">65%</div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-lang">SQL</div>
+        <div class="bar-fill" style="width: 55%;"></div>
+        <div class="bar-pct" style="width: 20%;">85%</div>
+      </div>
+    </div>
+
+    <div class="job job-3">
+      <h3 class="sm-heading" style="text-align: center;">
+        Sites Developed and Maintained by Me
+      </h3>
+      <div class="personal-site">
+        <ul>
+          <li class="personal-site-list">
+            <a href="https://kar.covid19-info.website">
+              Kar.COVID19-Info.website
+            </a>
+            <p>
+              An unofficial COVID 19 tracker created with React.js for the state
+              of Karnataka.
+              <a
+                href="https://github.com/AbhishekPednekar84/personal-portfolio"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View
+              </a>
+              the repository on Github.
+            </p>
+          </li>
+          <li class="personal-site-list">
+            <a href="https://yahpq.rocks">YAHPQ.rocks</a>
+            <p>
+              A quiz site created with a React.js, PostgreSQL and Django REST
+              API. The site is deployed on a Digital Ocean droplet.
+              <a
+                href="https://github.com/AbhishekPednekar84/hpquiz-frontend"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View
+              </a>
+              the repository on Github.
+            </p>
+          </li>
+          <li class="personal-site-list">
+            <a href="https://coronamythbusters.com">CoronaMythBusters.com</a>
+            <p>
+              A COVID-19 awareness site created in Django, HTML, CSS, jQuery,
+              Redis and PostgreSQL. The site is deployed on a Digital Ocean
+              droplet.
+              <a
+                href="https://github.com/AbhishekPednekar84/project-covid19"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View
+              </a>
+              the repository on Github.
+            </p>
+          </li>
+          <li class="personal-site-list">
+            <a href="https://abhishekpednekar.com">AbhishekPednekar.com</a>
+            <p>
+              Personal portfolio site developed using Flask, HTML, Sass, jQuery,
+              Redis and PostgreSQL. Site deployed on a Digital Ocean droplet.
+              <a
+                href="https://github.com/AbhishekPednekar84/personal-portfolio"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View
+              </a>
+              the repository on Github.
+            </p>
+          </li>
+          <li class="personal-site-list">
+            <a href="https://codedisciples.in" target="_blank" rel="noreferrer">
+              CodeDisciples.in
+            </a>
+            <p>
+              Personal blog site developed in Pelican, HTML, CSS and Markdown.
+              Site deployed using Netlify. Includes a Flask
+              <a
+                href="https://github.com/AbhishekPednekar84/personal-portfolio/tree/portfolio-page-updates/api"
+              >
+                REST API
+              </a>
+              with full-text search.
+              <a
+                href="https://github.com/AbhishekPednekar84/personal-blog-site"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View
+              </a>
+              the repository on Github.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </main>
 <footer class="portfolio-footer main-footer">
-    &copy; {{ year }}&nbsp;&nbsp;<b>·</b>&nbsp;&nbsp;Made with <img class="img-footer" alt="footer"
-        src="{{ url_for('static', filename='images/love.ico') }}"> in
-    Bangalore
+  &copy; {{ year }}&nbsp;&nbsp;
+  <b>·</b>
+  &nbsp;&nbsp;Made with
+  <img
+    class="img-footer"
+    alt="footer"
+    src="{{ url_for('static', filename='images/love.ico') }}"
+  />
+  in Bangalore
 </footer>
 
-<script type="text/javascript" src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename='js/portfolio.js') }}"
+></script>
 {% endblock content %}

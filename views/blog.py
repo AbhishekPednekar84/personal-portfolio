@@ -20,7 +20,7 @@ def blog():
     blogs = (
         db.session.query(Blog.id, Blog.title, Blog.url, Blog.description)
         .order_by(Blog.id.desc())
-        .paginate(page=page, per_page=4)
+        .paginate(page=page, per_page=7)
     )
     return render_template(
         "blog.html", title="Blog", blogs=blogs, year=get_current_year()
