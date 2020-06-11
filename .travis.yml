@@ -1,13 +1,15 @@
 language: python
 python:
-  - "3.7"
+- '3.7'
 install:
-  - pip install coveralls
-  - pip install -r requirements.txt
-script: 
-  - coverage run -m tests.test_app
+- pip install coveralls
+- pip install -r requirements.txt
+script:
+- coverage run -m tests.test_app
 after_success:
-  - coverage report
-  - coveralls
+- coverage report
+- coveralls
 notifications:
-  slack: cyborged:37K3wQ7qoWjZ1FM2cf7TdJTC
+  slack:
+    rooms:
+      secure: qa+OoxNAMAkb7kTRO98ks5j6nPzdkF8s8xkyGmOed4pXOy/ENqNpaQcpArHjFeh3WO6Fx2EnR8Ru1Kb5aTATbQsoXDLs7pm7onDvwiMZioI8Yot3Kimbe26XoQZ8LiA1wW08sm2NjPiUK7pkUqNUX9rNGhbryPp08FIIW8nrbOlo8h/fB11PitvVenysDUzPRWN+3AtVkQF4FrXRIlNH2eRY6Av94lmG2+KQXeR3ZtITBMdqb6Sodp4dHy/1cZVcedPPeuTiSuw8uk+Qs3F8La/8tnJS3+UCktLncuX5I8U25dsnuHXoh6QXRXz64/ouawssoJTEfL4+daklHHoTqAIOFkdgnWPiMjtHbfgea451RgQ2RG47Tv4VuigKCbRk/+AcXjCLt2GaLVuFRjazG+AAYO2i0fzgkPGy28D81rn/cDW3DSxH0tSrhzXqWonbw72fUuIIwa4aSTN2UY1PdBVTiJOXb0zRjFIhrfdiOcXfnIQ5DIJMXXW6ScgESkaLgK3d/n5DVgHGhukHZhbszl1dZwOj8cnrGPOkbfKNpQ9+N5rSRJQrP7v819x04OYb+Nnda9t/G7aKu0vU1WMuUzJ8P6q89bfUBAjnA8uckM5hN72x59yFhORQvA2OUYQIOxRSFZvP7FiCNzEZYwmoy6NVD/pN3dgxwqanjkt+G7I=
