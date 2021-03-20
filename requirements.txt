@@ -20,7 +20,7 @@ Flask-WTF==0.14.2
 identify==1.4.7
 importlib-metadata==0.19
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 jsonschema==3.2.0
 kombu==4.6.7
 Mako==1.1.0
