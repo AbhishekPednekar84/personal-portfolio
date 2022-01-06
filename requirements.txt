@@ -7,7 +7,7 @@ attrs==19.1.0
 autopep8==1.4.4
 billiard==3.6.1.0
 blinker==1.4
-celery==4.4.0
+celery==5.2.2
 cfgv==2.0.1
 Click==7.0
 colorama==0.4.1
